@@ -1,0 +1,126 @@
+<html>
+    <head>
+        <link type="text/css" rel="stylesheet" href="style.css">
+    </head>
+    <body style="background-color:powderblue;">
+        <div id="container">
+            <div class="header">
+        <img src="img1.png" alt="">
+        </div>
+        <!DOCTYPE html>
+
+<h2>Countdown Timer</h2>
+<p id="timer"></p>
+
+<h2>Custom Countdown Timer</h2>
+<p>Enter the duration for the countdown in minutes:</p>
+<input type="number" id="duration" placeholder="Enter time in minutes">
+<button onclick="startCountdown()">Start Countdown</button>
+
+<p id="timer"></p>
+
+<script>
+let countdownInterval;
+
+function startCountdown() {
+    // Get the countdown duration from the input field
+    const minutes = parseInt(document.getElementById("duration").value, 10);
+
+    // Validate the input and start the countdown
+    if (isNaN(minutes) || minutes <= 0) {
+        alert("Please enter a valid positive number for the countdown duration.");
+        return;
+    }
+
+    // Calculate the target date and time
+    const targetTime = new Date().getTime() + (minutes * 60 * 1000);
+
+    // Start the countdown
+    countdownInterval = setInterval(function() {
+        // Get the current date and time
+        const now = new Date().getTime();
+
+        // Calculate the remaining time in milliseconds
+        const timeRemaining = targetTime - now;
+
+        // If the countdown is finished, display the alert and stop the countdown
+        if (timeRemaining <= 0) {
+            clearInterval(countdownInterval);
+            document.getElementById("timer").innerHTML = "Countdown completed!";
+            alert("Countdown completed!");
+        } else {
+            // Calculate remaining minutes and seconds
+            const remainingMinutes = Math.floor(timeRemaining / (1000 * 60));
+            const remainingSeconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+            // Display the countdown on the web page
+            document.getElementById("timer").innerHTML =
+                "Time remaining: " + remainingMinutes + "m " + remainingSeconds + "s";
+        }
+    }, 1000); // Update the countdown every second (1000 milliseconds)
+}
+</script>
+
+        <div id="nav"></div>
+        <div class="sidebar"></div>
+        <h1 align="center" style="font-size:300%;font-family: Arial, Helvetica, sans-serif;">Traction Shastra</h1>
+        <div class="row">
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="index.html">Home</a>
+              </div>
+              <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Add a Blog</title>
+                <link rel="stylesheet" href="styles.css">
+            </head>
+            
+                <h1>Add a Blog</h1>
+                <form id="blogForm">
+                    <label for="title">Title:</label>
+                    <input type="text" id="title" name="title" required><br><br>
+                    <label for="content">Content:</label><br>
+                    <textarea id="content" name="content" rows="10" cols="50" required></textarea><br><br>
+                    <input type="submit" value="Submit">
+                </form>
+                <div id="successMessage"></div>
+                <script src="script.js"></script>
+            
+    <button onclick="window.location.href='submissions1.html'">View Submissions</button>
+
+              <div id="main">
+                <span style="font-size:50px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+              </div>
+              
+              <script>
+              function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+                document.getElementById("main").style.marginLeft = "250px";
+              }
+              
+              function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+                document.getElementById("main").style.marginLeft= "0";
+              }
+              </script>
+            <div class="column">
+              <img src="img2.jpg" alt="health" style="width: 75%; height:250px">
+              <a href="health.html">HEALTH</a>
+            </div>
+            <div class="column">
+              <img src="img3.jpg" alt="stock" style="width:75%; height: 250px;">
+              <a href="stock.html">STOCK</a>
+            </div>
+            <div class="column">
+              <img src="img4.jpg" alt="diet" style="width:75%; height: 250px;">
+              <a href="diet.html">DIET</a>
+            </div>
+          </div>
+          <center>
+            <p>Copyright &copy; Traction Shastra. All Rights Reserved  |  Contact Us: +91 90000 00000</p>	
+        </center>
+    </body>
+</html>

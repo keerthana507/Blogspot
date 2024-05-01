@@ -1,0 +1,35 @@
+
+<html>
+    <head>
+        <link type="text/css" rel="stylesheet" href="style.css">
+        <link type="text/html" rel="stylesheet" href="submit.html">
+    </head>
+    <body>
+
+    <h3 style="color:brown; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; font-size: 75px;">Contact Form</h3>
+    
+    <div class="contain">
+      <form action="action_page.php" method="post">
+        <label for="fname">FirstName</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+    
+        <label for="lname">password</label>
+        <input type="text" id="password" name="password" placeholder="Your password">
+    
+        <label for="State">State</label>
+        <select id="State" name="State">
+          <option value="Maharashtra">Maharashtra</option>
+          <option value="Telangana">Telangana</option>
+          <option value="Delhi">Delhi</option>
+        </select>
+    
+        <label for="subject">Description</label>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+    
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+    
+    </body>
+    </html>
+    

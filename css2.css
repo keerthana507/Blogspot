@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.image-container {
+    display: inline-block; 
+    border: 2px solid blueviolet; 
+    background-color:goldenrod; 
+    padding: 5px; 
+}
+
+header {
+    text-align: center;
+    color: blueviolet;
+}
+
+h1 {
+    font-size: 2em;
+    margin: 0;
+}
+
+p {
+    font-size: 1.2em;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    color: blue;
+}
+
+li {
+    display: inline-block;
+    margin-right: 10px;
+    color: blue;
+}
+
+a {
+    text-decoration: none;
+    color: crimson;
+}
+.star-rating {
+    font-size: 24px; 
+}
+
+.star {
+    color: gold; 
+}
+.Projects{
+    background-color: lightgoldenrodyellow; /* Change to the color you want */
+    padding: 20px; /* Optional: Adds some space inside the section */
+}

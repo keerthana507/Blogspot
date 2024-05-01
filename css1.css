@@ -1,0 +1,11 @@
+.name{
+    color:aqua;
+    background-color: rosybrown;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.img{
+    border: 3px;
+    border-color: green;
+    background-color: fuchsia;
+}
